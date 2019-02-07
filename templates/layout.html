@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="referrer" content="always" />
+        <meta name="keywords" content="links, awesome, save, share, shorten" />
+        <meta name="description" content="Get the most out of your social and online marketing efforts. Own, understand and activate your best audience through the power of the link with Shortly." />
+        <title>Shortly</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <a href="/">
+                        <h3 class="masthead-brand">Shortly</h3>
+                    </a>      
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link {{ active == 'home' ? 'active' : '' }}" href="/">Home</a>
+                        <a class="nav-link {{ active == 'contact'  ? 'active' : '' }}" href="/contact">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            {% block content %}
+            {% endblock content %}
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    © 2019 <a href="/">Shortly™</a> Writen by <a href="https://github.com/mejison">mejison</a>
+                </div>
+            </footer>
+        </div>
+        <script src="https://unpkg.com/vee-validate@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
