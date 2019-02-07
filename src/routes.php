@@ -16,7 +16,7 @@ $app->group('/api', function () use ($app) {
         $app->post('/create', function (Request $request, Response $response) {
             $body = $request->getParsedBody();            
             $free_link = $this->db->query("select `id`, `short` from `links` where `url` = '' limit 1")->fetch();            
-            $this->db->query("UPDATE `test`.`links` SET `url` = '" . $body['link']. "' WHERE `id` = " . $free_link['id']);
+            $this->db->query("UPDATE `links` SET `url` = '" . $body['link']. "' WHERE `id` = " . $free_link['id']);
             echo json_encode([
                 'message' => 'Successfuly created.',
                 'data' => $free_link['short']
